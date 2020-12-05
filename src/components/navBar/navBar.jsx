@@ -1,11 +1,15 @@
 import './navBar.scss';
+import CartWidget from './cartWidget/cartWidget';
 
 function navBar() {
   return (
     <>
       <header>
         <div>
-          <h1 className="title">BomJi Box</h1>
+          <div className="container_title">
+            <h1 className="title">BomJi Box</h1>
+            <CartWidget/>
+          </div>
           <nav>
             <ul>
               <li>

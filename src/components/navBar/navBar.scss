@@ -8,13 +8,18 @@ $fontfamily: 'Roboto', sans-serif;
 header{
     background-color: #fdd12a;
     font-family: $fontfamily;
-    text-align: center;
-
-    .title{
-        color: #997648;
-        font-weight: 900;
-        margin: 0;
-        padding: 15px 0;
+    .container_title{
+        display: inline-flex;
+        width: 100%;
+        text-align: center;
+        .title{
+            width: 95%;
+            color: #997648;
+            font-weight: 900;
+            margin: 0;
+            padding: 15px 0;
+        }
+    
     }
 
     nav{
@@ -24,6 +29,8 @@ header{
             width: 60%;
             list-style: none;
             padding: 0;
+            margin-left: 20%;
+            margin-right: 20%;
             li{
                 margin: 0 5px;
                 width: 20%;
