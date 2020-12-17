@@ -24,5 +24,13 @@ $fontfamily: 'Roboto', sans-serif;
                 text-align: center;
             }
         }
+        .loading{
+            font-size: 1.5em;
+            color: $color2;
+            font-family: $color3;
+            text-align: center;
+            font-weight: bold;
+
+        }
     }   
 }
