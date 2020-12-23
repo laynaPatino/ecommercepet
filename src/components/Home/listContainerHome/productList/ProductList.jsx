@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react';
+import ListContainerHome from '../../listContainerHome/listContainerHome'
 import Products from '../../../product/Products';
 import './productlist.scss';
 
@@ -49,13 +50,14 @@ const Productlist = () => {
         getProducstFromArray();
          // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
-
+    
     return (
         <section className="productList">
             <div className="container">
             {
                     itemsProduct.length ?
                     <>
+                        <ListContainerHome/>
                         <h2>Productos Top</h2>
                         <ul>
                             {
