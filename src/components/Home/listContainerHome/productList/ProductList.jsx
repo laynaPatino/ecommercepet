@@ -53,7 +53,7 @@ const Productlist = () => {
     
     return (
         <section className="productList">
-            <div className="container">
+            <div className="container_">
             {
                     itemsProduct.length ?
                     <>
@@ -66,6 +66,7 @@ const Productlist = () => {
                                         <Products
                                             titulo={item.titulo} 
                                             precio={item.precio} 
+                                            id={item.id}
                                         />
                                     </li>
                                 ))

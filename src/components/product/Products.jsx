@@ -1,7 +1,8 @@
 import {useState} from 'react';
 import './products.scss';
+import {Link} from 'react-router-dom';
 
-const Products = ({nameProduct, precio}) => {
+const Products = ({nameProduct, precio, id}) => {
     const [counter, setCounter] = useState(0);
 
     const decreaseCounter = () => {
@@ -30,7 +31,8 @@ const Products = ({nameProduct, precio}) => {
                     <button onClick={() => setCounter(counter + 1)}>+</button>
                 </div>
                 <h4>${precio}</h4>
-                <button onClick={addProduct} className='addButton'>Agregar al carrito</button>
+                <button onClick={addProduct} className='addButton'>Agregar al Carrito</button>
+                <Link to={`/item/${id}`}><button className='addButton'>Ver mas</button></Link>
             </div>
         </article>
     )
