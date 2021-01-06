@@ -58,14 +58,14 @@ const DetailProducts = () => {
         .catch(error => console.log(error));
     }, []);
 
-
+    
 
     return (
         <>
           {
                 product ?
                 <div>
-                    <ProductDetail product={product}/>
+                    <ProductDetail product={product} />
                     <section>
                     <ListContainerHome/>
                     </section>

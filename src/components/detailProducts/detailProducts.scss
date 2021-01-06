@@ -56,4 +56,48 @@ $fontfamily: 'Roboto', sans-serif;
         }
     }
 
+    .counter{
+        margin-bottom: 10px;
+        input{
+            text-align: center;
+            font-family: $fontfamily;
+            color: $color2;
+            font-weight: bold;
+            border: $color3 solid 2px;
+            padding: 2px;
+        }
+        button{
+            font-weight: bold;
+            border: $color3 solid 2px; 
+            padding: 2px 6px; 
+            position: relative;
+            bottom: 1px;
+            color: $color2;
+            &:hover{
+                background-color: $color1;
+            }
+        }
+        
+    }
+
+    .addButton{
+        color: $color2;
+        border: solid $color3 2px;
+        font-family: $fontfamily;
+        font-weight: 700;
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin: 5px;
+        &:hover{
+            background-color: $color1;
+        }
+        &:focus{
+            border: solid $color3 2px; 
+        }
+
+        &:visited{
+            border: solid $color3 2px; 
+        }
+    }
+
 }

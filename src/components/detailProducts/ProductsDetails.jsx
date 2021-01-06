@@ -1,5 +1,22 @@
+import {useState} from 'react';
+import { useHistory } from "react-router-dom";
 
-const productDetail = ({product}) => {
+const ProductDetail = ({product}) => {
+    const [counter, setCounter] = useState(0);
+    let history = useHistory();
+
+    const decreaseCounter = () => {
+        if(counter >= 1) {
+            setCounter(counter - 1);
+        }
+    }
+
+    const handleClickAddProduct = () => {
+        alert(`Tienes ${counter} productos en el carrito`);
+        history.push("/cart");
+ 
+    }
+
     return (
         <article className="container">
             <div className="container_img">
@@ -24,10 +41,20 @@ const productDetail = ({product}) => {
             <div className="container_precio">
                 <h3>Precio</h3>
                 <h2>${product.precio}</h2>
-                <button>Añadir al Carrito</button>
+                <div className="counter">
+                    <button 
+                        disabled={counter === 0 ? 'disabled' : null } 
+                        onClick={decreaseCounter}
+                    >
+                        -
+                    </button>
+                    <input type="text" value={counter} readOnly/>
+                    <button onClick={() => setCounter(counter + 1)}>+</button>
+                </div>
+                <button onClick={handleClickAddProduct} className='addButton'>Agregar al Carrito</button>
             </div>
         </article>
     )
 }
 
-export default productDetail
+export default ProductDetail
