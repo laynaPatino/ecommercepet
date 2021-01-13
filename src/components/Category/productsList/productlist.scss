@@ -1,0 +1,9 @@
+.products{
+    display: inline-flex;
+    width: 100%;
+    article{
+        margin: 15px;
+        text-align: center;
+        width: 25%;
+    }
+}

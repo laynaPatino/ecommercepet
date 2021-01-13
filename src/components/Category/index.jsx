@@ -1,27 +1,30 @@
-import {useEffect} from 'react';
+import {useState, useEffect} from 'react';
+import {productsList} from '../../products';
+import {useParams} from 'react-router-dom';
+import ListContainerHome from '../Home/listContainerHome/listContainerHome'
+import Products from '../Category/productsList/index'
 import './category.scss';
-import {Switch, useParams} from 'react-router-dom';
+
 
 const Category = () => {
     const {category_name} = useParams();
+    const [prods, setProds] = useState([]);
 
-    const queCategoriaEs = (cat) => {
-        switch(cat) {
-            case 'cajaDelMes': return <h2>Estas en seccion de caja del mes</h2>;
-            case 'porTemporada': return <h2>Estas en seccion por temporada</h2>;
-            case 'sorpresa': return <h2>Estas en seccion de Sorpresas</h2>;
-            case 'promociones': return <h2>Estas en seccion Promociones</h2>;
-            case 'personalizadas': return <h2>Estas en seccion Personalizadas</h2>;
-            default: return <h2>la seccion no existe</h2>
+    useEffect(() => {
+        if(category_name) {
+            setProds(productsList.filter(prod => prod.category === category_name))
         }
-    }
+    }, [category_name])
 
     return (
         <>
-            {
-               queCategoriaEs(category_name) 
-            }
+            <h2>{category_name}</h2>
+            <Products products={prods} />
+            <div>
+            <ListContainerHome/>
+            </div>
         </>
     )
 }
+
 export default Category;

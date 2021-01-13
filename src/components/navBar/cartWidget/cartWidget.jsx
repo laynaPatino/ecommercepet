@@ -1,18 +1,29 @@
+import {useContext} from 'react';
+import {Store} from '../../../store/index';
 import { SiInstacart } from "react-icons/si";
-import './cartWidget.scss'
+import ListCard from './listCard/index'
+import './cartWidget.scss';
 
-function cartWidget() {
+
+
+
+function CartWidget() {
+
+    const [data, setData] = useContext(Store);
+
+    console.log(data)
+
   return (
     <a href="#" className="cartWidget">
         <div className="containerCart">
             <span>
                 <SiInstacart/>
             </span>
-            <span>0</span>
+            <span>{data.cantidad}</span>
             <div className="listCartWidget">
                 <h4>Mi Carrito</h4>
                 <div className="containerList">
-                    <p>Tu carrito esta vacio</p>
+                    <ListCard/>
                 </div>
             </div>
         </div>
@@ -20,4 +31,4 @@ function cartWidget() {
   );
 }
 
-export default cartWidget;
+export default CartWidget;

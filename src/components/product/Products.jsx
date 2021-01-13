@@ -3,13 +3,6 @@ import './products.scss';
 import {Link} from 'react-router-dom';
 
 const Products = ({titulo, precio, id}) => {
-    const [counter, setCounter] = useState(0);
-
-    const decreaseCounter = () => {
-        if(counter >= 1) {
-            setCounter(counter - 1);
-        }
-    }
 
     return (
         <article className="productCard">

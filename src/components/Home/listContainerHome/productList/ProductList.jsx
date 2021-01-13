@@ -1,40 +1,16 @@
 import {useState, useEffect} from 'react';
 import ListContainerHome from '../../listContainerHome/listContainerHome'
 import Products from '../../../product/Products';
+import {productsList} from '../../../../products';
 import './productlist.scss';
 
 const Productlist = () => {
 
     const [itemsProduct, setItemsProduct] = useState([]);
 
-    const products = [
-        {
-            id: 1,
-            titulo: 'Nombre de producto 1',
-            precio: 500,
-        },
-        {
-            id: 2,
-            titulo: 'Nombre de producto 2',
-            precio: 800,
-        },
-        {
-            id: 3,
-            titulo: 'Nombre de producto 3',
-            precio: 200,
-        },
-        {
-            id: 4,
-            titulo: 'Nombre de producto 4',
-            precio: 300,
-        },
-        
-    ]
-
     const getProducts = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(products);
-        }, 2000)
+        const outstandingProducts = productsList.filter(item => item.outstanding);
+        resolve(outstandingProducts);
     })
 
     const getProducstFromArray = async () => {
@@ -62,9 +38,9 @@ const Productlist = () => {
                         <ul>
                             {
                                 itemsProduct.map((item, index) => (
-                                    <li key={index}>
+                                    <li key={item.id}>
                                         <Products
-                                            titulo={item.titulo} 
+                                            titulo={item.nombre} 
                                             precio={item.precio} 
                                             id={item.id}
                                         />

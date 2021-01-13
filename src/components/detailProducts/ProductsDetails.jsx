@@ -1,9 +1,11 @@
-import {useState} from 'react';
+import {useState, useContext} from 'react';
+import {Store} from '../../store/index';
 import { useHistory } from "react-router-dom";
 
 const ProductDetail = ({product}) => {
+    const history = useHistory();
+    const [data, setData] = useContext(Store);
     const [counter, setCounter] = useState(0);
-    let history = useHistory();
 
     const decreaseCounter = () => {
         if(counter >= 1) {
@@ -12,10 +14,17 @@ const ProductDetail = ({product}) => {
     }
 
     const handleClickAddProduct = () => {
-        alert(`Tienes ${counter} productos en el carrito`);
-        history.push("/cart");
- 
+        setData({
+            ...data,
+            cantidad:data.cantidad + counter,
+            items:[...data.items, product ]
+
+        });
+        history.push('/cart');
+        // alert(`Agregaste ${qty} productos al carrito`);	
     }
+    
+    console.log(data);
 
     return (
         <article className="container">
