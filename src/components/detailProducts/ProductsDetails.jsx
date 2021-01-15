@@ -14,15 +14,17 @@ const ProductDetail = ({product}) => {
     }
 
     const handleClickAddProduct = () => {
-        setData({
-            ...data,
-            cantidad:data.cantidad + counter,
-            precioTotal: data.precioTotal + (product.precio * counter),
-            items:[...data.items, {product: product, cantidad: counter, precioTotal:(product.precio * counter) }]
-
-        });
-        history.push('/cart');
-        // alert(`Agregaste ${qty} productos al carrito`);	
+        if(counter >= 1){
+            setData({
+                ...data,
+                cantidad:data.cantidad + counter,
+                precioTotal: data.precioTotal + (product.precio * counter),
+                items:[...data.items, {product: product, cantidad: counter, precioTotal:(product.precio * counter) }]
+    
+            });
+            history.push('/cart');
+            // alert(`Agregaste ${qty} productos al carrito`);
+        }	
     }
     
     console.log(data);
