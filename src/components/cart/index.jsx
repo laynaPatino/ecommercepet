@@ -7,20 +7,23 @@ import '../cart/cart.scss'
 
 const Cart = () => {
     const [data, setData] = useContext(Store);
-    const products = data.items
-    console.log(data)
 
     return (
         <section>
             <h1>Cart</h1>
             <div>
-                <ul>
-                    {
-                        products.map(item => <li key={item.id}><CardList id={item.id} titulo={item.nombre} precio={item.precio} categoria={item.category} /></li>)
-
-                    }
-                </ul>
+                {
+                    data.items.map(item =>
+                        <>
+                            <CardList titulo={item.product.nombre} precio={item.product.precio} cantidad={item.product.cantidad} id={item.product.id} cantidad={item.cantidad}/>
+                        </>
+                    )
+                }
             </div>
+
+
+
+
         </section>
 
     )

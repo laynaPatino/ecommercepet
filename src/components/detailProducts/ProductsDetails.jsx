@@ -17,7 +17,8 @@ const ProductDetail = ({product}) => {
         setData({
             ...data,
             cantidad:data.cantidad + counter,
-            items:[...data.items, product ]
+            precioTotal: data.precioTotal + (product.precio * counter),
+            items:[...data.items, {product: product, cantidad: counter, precioTotal:(product.precio * counter) }]
 
         });
         history.push('/cart');
@@ -44,8 +45,7 @@ const ProductDetail = ({product}) => {
                 <div>
                     <h4>Precio</h4>
                     <p>${product.precio}</p>
-                </div>
-               
+                </div> 
             </div>
             <div className="container_precio">
                 <h3>Precio</h3>

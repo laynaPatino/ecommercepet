@@ -8,7 +8,7 @@ export const productsList = [
             "img": "https://http2.mlstatic.com/D_NQ_NP_944881-MLM41810151952_052020-W.jpg",
             "descrip": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium quibusdam similique unde quod, laudantium, perferendis voluptas nemo in esse obcaecati officiis nihil debitis. Deleniti ipsa fuga aliquid voluptatem quia! Mollitia",
             "color":"color del producto",
-            "precio": 500
+            "precio": 500,
         },
         {
            "id": 2,
