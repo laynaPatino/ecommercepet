@@ -15,7 +15,7 @@ const Cart = () => {
                 {
                     data.items.map(item =>
                         <>
-                            <CardList titulo={item.product.nombre} precio={item.product.precio} cantidad={item.product.cantidad} id={item.product.id} cantidad={item.cantidad}/>
+                            <CardList key={item.product.id} titulo={item.product.nombre} precio={item.product.precio} cantidad={item.product.cantidad} id={item.product.id} cantidad={item.cantidad}/>
                         </>
                     )
                 }

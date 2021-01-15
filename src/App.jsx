@@ -18,6 +18,7 @@ function App() {
   })
 
   return (
+    <div className='App'>
     <Store.Provider value={[data, setData]}>
       <BrowserRouter>
         <NavBar/>
@@ -37,6 +38,7 @@ function App() {
         </Switch>
       </BrowserRouter>
     </Store.Provider>
+    </div>
   );
 }
 

@@ -10,12 +10,17 @@ const CartList = ({titulo,precio,id,cantidad}) => {
     var itemid = id
     const removeProduct = () =>{
         console.log(itemid)
-        products.forEach(function(product, index, object) {
-            if(product.product.id === itemid){
-              object.splice(index, 1);
+        let tempData = data
+        tempData.items.forEach(function (product, index, object) {
+            if (product.product.id === itemid) {
+                object.splice(index, 1);
             }
         });
-        console.log(products)
+        setData({
+            ...data,
+            items:tempData.items
+        })
+        console.log(tempData)
         history.push('/cart');
     }
 
@@ -26,6 +31,7 @@ const CartList = ({titulo,precio,id,cantidad}) => {
             <h3>{titulo}</h3>
             <h4>Precio: ${precio}</h4>
             <h4>Cantidad: {cantidad}</h4>
+            <h4></h4>
             <button onClick={removeProduct}>Remover Producto</button>
         </div>
     </div>
