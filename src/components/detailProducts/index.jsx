@@ -2,23 +2,24 @@ import {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 import ListContainerHome from '../Home/listContainerHome/listContainerHome';
 import ProductDetail from './ProductsDetails';
-import {productsList} from '../../products';
+import {getFirestore} from "../../firebase/index";
 import './detailProducts.scss';
 
 
 const DetailProducts = () => {
     const {itemid} = useParams();
     const [product, setProduct] = useState(null);
-
-    const getProduct = new Promise((resolve, reject) => {
-            const productClick = productsList.find(producto => producto.id == itemid)
-            resolve(productClick)
-    });
+    const db = getFirestore();
 
     useEffect(() => {
-        getProduct
-        .then(response => setProduct(response))
-        .catch(error => console.log(error));
+        db.collection('productos').doc(itemid).get()
+        .then(doc =>{
+            if(doc.exists){
+                setProduct({id: doc.id, data: doc.data()});
+            }
+        })
+        .catch(e => console.log(e))
+
     }, []);
 
     

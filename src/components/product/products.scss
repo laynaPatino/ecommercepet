@@ -6,9 +6,15 @@ $color5:#f5f6f7;
 $fontfamily: 'Roboto', sans-serif;
 
 .productCard{
-    img{
-        border-bottom: $color2 2px solid;
+    .container_img{
+        border-bottom: $color2 3px solid;
+        width: 300px;
+        img{
+            width: 100%;
+        }
+
     }
+    
     h3{
         color: $color2;
         font-family: $fontfamily;

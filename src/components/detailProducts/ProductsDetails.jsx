@@ -18,8 +18,8 @@ const ProductDetail = ({product}) => {
             setData({
                 ...data,
                 cantidad:data.cantidad + counter,
-                precioTotal: data.precioTotal + (product.precio * counter),
-                items:[...data.items, {product: product, cantidad: counter, precioTotal:(product.precio * counter) }]
+                precioTotal: data.precioTotal + (product.data.precio * counter),
+                items:[...data.items, {product:  product.data, id:product.id, cantidad: counter, precioTotal:(product.data.precio * counter) }]
     
             });
             history.push('/cart');
@@ -32,26 +32,26 @@ const ProductDetail = ({product}) => {
     return (
         <article className="container">
             <div className="container_img">
-                <img src={product.img} alt="Imagen de producto" width="400" />  
+                <img src={product.data.img} alt="Imagen de producto" />  
             </div>
             <div className="container_div">
-                <h1>{product.nombre}</h1>
+                <h1>{product.data.nombre}</h1>
                 <div>
                     <h4>Detalles del Producto</h4>
                     <p>
-                        {product.descrip}
+                        {product.data.descrip}
                     </p>
                     <h4>Color</h4>
-                    <p>{product.color}</p>
+                    <p>{product.data.color}</p>
                 </div>
                 <div>
                     <h4>Precio</h4>
-                    <p>${product.precio}</p>
+                    <p>${product.data.precio}</p>
                 </div> 
             </div>
             <div className="container_precio">
                 <h3>Precio</h3>
-                <h2>${product.precio}</h2>
+                <h2>${product.data.precio}</h2>
                 <div className="counter">
                     <button 
                         disabled={counter === 0 ? 'disabled' : null } 

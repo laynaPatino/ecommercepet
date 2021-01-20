@@ -2,11 +2,13 @@ import {useState} from 'react';
 import './products.scss';
 import {Link} from 'react-router-dom';
 
-const Products = ({titulo, precio, id}) => {
+const Products = ({ titulo, precio, id, img }) => {
 
     return (
         <article className="productCard">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_944881-MLM41810151952_052020-W.jpg" alt="Imagen de producto" width="300"/>
+            <div className='container_img'>
+                <img src={img} alt="Imagen de producto"/>
+            </div>
             <div>
                 <h3>{titulo}</h3>
                 <h4>${precio}</h4>

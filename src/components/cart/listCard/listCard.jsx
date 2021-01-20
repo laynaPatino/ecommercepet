@@ -3,16 +3,15 @@ import {Store} from '../../../store/index';
 import { useHistory } from "react-router-dom";
 import './listCard.scss';
 
-const CartList = ({titulo,precio,id,cantidad, precioTotal}) => {
+const CartList = ({titulo,precio,id,img,cantidad, precioTotal}) => {
     const [data, setData] = useContext(Store);
     const history = useHistory();
-    var products = data.items
     var itemid = id
     const removeProduct = () =>{
         console.log(itemid)
         let tempData = data
         tempData.items.forEach(function (product, index, object) {
-            if (product.product.id === itemid) {
+            if (product.id === itemid) {
                 object.splice(index, 1);
             }
         });
@@ -28,7 +27,7 @@ const CartList = ({titulo,precio,id,cantidad, precioTotal}) => {
 
     return (
         <div className='itemCart'>
-            <img src="https://http2.mlstatic.com/D_NQ_NP_944881-MLM41810151952_052020-W.jpg" alt="Imagen de producto" width="300" />
+            <img src={img} alt="Imagen de producto" width="300" />
             <div>
                 <h3>{titulo}</h3>
                 <h4>Precio Unidad: ${precio}</h4>

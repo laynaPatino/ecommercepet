@@ -18,7 +18,7 @@ const Cart = () => {
                     <div>
                         {
                             data.items.map(item =>
-                                <CardList key={item.product.id} titulo={item.product.nombre} precio={item.product.precio} cantidad={item.product.cantidad} id={item.product.id} cantidad={item.cantidad} precioTotal={item.precioTotal} />
+                                <CardList key={item.product.id} titulo={item.product.nombre} precio={item.product.precio} cantidad={item.product.cantidad} img={item.product.img} id={item.id} cantidad={item.cantidad} precioTotal={item.precioTotal} />
                             )
                         }
                     </div>

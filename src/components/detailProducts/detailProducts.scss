@@ -25,6 +25,10 @@ $fontfamily: 'Roboto', sans-serif;
         width: 35%;
         text-align: center;
         border-right: solid 1px $color2;
+        padding: 5px;
+        img{
+            width: 100%;
+        }
     }
     .container_div{
         width: 50%;

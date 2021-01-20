@@ -1,25 +1,28 @@
 import {useState, useEffect} from 'react';
 import ListContainerHome from '../../listContainerHome/listContainerHome'
 import Products from '../../../product/Products';
-import {productsList} from '../../../../products';
 import './productlist.scss';
+import {getFirestore} from '../../../../firebase/index';
 
 const Productlist = () => {
 
     const [itemsProduct, setItemsProduct] = useState([]);
+    const db = getFirestore();
 
-    const getProducts = new Promise((resolve, reject) => {
-        const outstandingProducts = productsList.filter(item => item.outstanding);
-        resolve(outstandingProducts);
-    })
 
-    const getProducstFromArray = async () => {
-        try {
-            const result = await getProducts;
-            setItemsProduct(result);
-        } catch(error) {
-            alert('No podemos mostrar los productos, intenta en unos minutos, Gracias!');
-        }
+
+    const getProducstFromArray = () => {
+        db.collection('productos').where("outstanding", "==", true).get()
+        .then(docs => {
+            let arr = [];
+            docs.forEach(doc =>{
+                arr.push({id: doc.id, data: doc.data()})
+            })
+            console.log(arr)
+            setItemsProduct(arr);
+        })
+        .catch(e => console.log(e))
+
     }
 
     useEffect(() => {
@@ -40,8 +43,9 @@ const Productlist = () => {
                                 itemsProduct.map((item, index) => (
                                     <li key={item.id}>
                                         <Products
-                                            titulo={item.nombre} 
-                                            precio={item.precio} 
+                                            img = {item.data.img} 
+                                            titulo={item.data.nombre} 
+                                            precio={item.data.precio} 
                                             id={item.id}
                                         />
                                     </li>
