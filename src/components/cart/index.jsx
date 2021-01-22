@@ -2,7 +2,6 @@ import {useContext} from 'react';
 import {Store} from '../../../src/store/index';
 import CardList from "./listCard/listCard";
 import {Link} from 'react-router-dom';
-
 import '../cart/cart.scss'
 
 
@@ -18,13 +17,14 @@ const Cart = () => {
                     <div>
                         {
                             data.items.map(item =>
-                                <CardList key={item.product.id} titulo={item.product.nombre} precio={item.product.precio} cantidad={item.product.cantidad} img={item.product.img} id={item.id} cantidad={item.cantidad} precioTotal={item.precioTotal} />
+                                <CardList key={item.id} titulo={item.product.nombre} precio={item.product.precio} cantidad={item.product.cantidad} img={item.product.img} id={item.id} cantidad={item.cantidad} precioTotal={item.precioTotal} />
                             )
                         }
                     </div>
                     <div>
                         <h2>Items Agregados: {data.cantidad}</h2>
                         <h2>Precio Total: ${data.precioTotal}</h2>
+                        <Link to={`/checkout`}><button className="finalizarCompra">Finalizar Compra</button></Link>
                     </div>
                 </>:<>
                 <h2>Carrito Vacío</h2>

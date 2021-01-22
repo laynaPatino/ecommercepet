@@ -6,6 +6,7 @@ import NavBar from './components/navBar/navBar';
 import ProductList from './components/Home/listContainerHome/productList/ProductList'
 import DetailProducts from './components/detailProducts/index';
 import Cart from './components/cart/index';
+import Checkout from '../src/components/Checkout/Checkout';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Store } from '../src/store/index'
 
@@ -24,16 +25,19 @@ function App() {
         <NavBar/>
         <Switch>
           <Route exact path="/">
-            <ProductList />
+            <ProductList/>
           </Route>
           <Route exact path="/item/:itemid">
-            <DetailProducts />
+            <DetailProducts/>
           </Route>
           <Route exact path="/category/:category_name?">
-            <Category />
+            <Category/>
           </Route>
           <Route exact path="/cart">
-            <Cart />
+            <Cart/>
+          </Route>
+          <Route exact path="/checkout">
+            <Checkout/>
           </Route>
         </Switch>
       </BrowserRouter>

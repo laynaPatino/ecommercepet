@@ -22,5 +22,18 @@ $fontfamily: 'Roboto', sans-serif;
         color: $color3;
         font-weight: 500;
     }
+    .finalizarCompra{
+        padding: 20px 40px;
+        font-family: $fontfamily;
+        font-size: 1.5em;
+        font-weight: 500;
+        border: $color1 2px solid;
+        border-radius: 10px;
+        background-color: $color3;
+        color: $color5;
+        &:hover{
+            background-color: $color2;
+        }
+    }
 
 }

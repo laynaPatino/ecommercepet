@@ -8,7 +8,7 @@ const ListCard = () => {
     return (
         <div>
             {
-                data.items.map(item => <p key={item.product.id}> {item.product.nombre}</p>)
+                data.items.map(item => <p key={item.id}> {item.product.nombre}</p>)
             }
         </div>
     )
