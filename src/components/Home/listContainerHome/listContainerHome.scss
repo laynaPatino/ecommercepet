@@ -1,74 +1,48 @@
-$color1:#fdd12a;
-$color2:#997648;
-$color3:#97c407;
-$color4:#9e9e9e;
-$color5:#f5f6f7;
-$fontfamily: 'Roboto', sans-serif;
+$color1: #fdd12a;
+$color2: #997648;
+$color3: #97c407;
+$color4: #9e9e9e;
+$color5: #f5f6f7;
+$fontfamily: "Roboto", sans-serif;
 
-
-@mixin white-gradient {
-	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+.slider_img {
+  width: 100%;
+  object-fit: cover;
+  height: 600px;
 }
 
-$animationSpeed: 40s;
-
-// Animation
-@keyframes scroll {
-	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-250px * 7))}
-}
-
-
-// Styling
-.slider {
-	background: white;
-	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
-	margin: auto;
-	overflow:hidden;
-    position: relative;
-    height: 300px;
-    display: flex;
-	
-	&::before,
-	&::after {
-		@include white-gradient;
-		content: "";
-		position: absolute;
-		width: 200px;
-        z-index: 2;
-        height: 300px;
+.productList {
+  .container_ {
+	.slider{
+		max-height: 600px;
+		.slick-slider{
+			.slick-arrow{
+				display: none !important;
+			}
+		}
+		.slick-dots {
+			width: 100%;
+			position: absolute;
+			bottom: 1.5rem;
+			text-align: center;
+			li.slick-active button {
+				background: $color1;
+			  }
+			li {
+				width: 0%;
+				height: auto;
+				margin: 0 1rem;
+				button{
+					background: rgba(255, 255, 255, 0.5);
+					border-radius: 50%;
+					width: 1rem;
+					height: 1rem;
+				}
+				button:before {
+				  display: none;
+				}
+			  }
+		  }
 	}
-	
-	&::after {
-		right: 0;
-		top: 0;
-		transform: rotateZ(180deg);
-	}
-
-	&::before {
-		left: 0;
-		top: 0;
-	}
-	
-	.slide-track {
-		animation: scroll $animationSpeed linear infinite;
-		display: flex;
-		width: calc(250px * 14);
-	}
-	
-	.slide {
-        height: 80%;
-        width: 490px;
-        padding: 10px;
-        img{
-            width: 100%;
-            height: 100%;
-        }
-        h3{
-            margin: 2px;
-            width: 100%;
-            text-align: center;
-            color: #997648;
-        }
-	}
+  }
 }

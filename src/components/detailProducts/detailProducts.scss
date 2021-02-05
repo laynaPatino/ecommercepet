@@ -21,11 +21,12 @@ $fontfamily: 'Roboto', sans-serif;
     margin-bottom: 30px;
     padding: 10px;
     color: $color2;
+    width: 100%;
     .container_img{
         width: 35%;
         text-align: center;
         border-right: solid 1px $color2;
-        padding: 5px;
+        padding: 10px;
         img{
             width: 100%;
         }

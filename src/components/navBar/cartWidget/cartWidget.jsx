@@ -1,7 +1,8 @@
 import {useContext} from 'react';
 import {Store} from '../../../store/index';
 import { SiInstacart } from "react-icons/si";
-import ListCard from './listCard/index'
+import ListCard from './listCard/index';
+import {Link} from 'react-router-dom'
 import './cartWidget.scss';
 
 
@@ -9,17 +10,17 @@ import './cartWidget.scss';
 
 function CartWidget() {
 
-    const [data, setData] = useContext(Store);
+    const [data] = useContext(Store);
 
     console.log(data)
 
   return (
-    <a href="#" className="cartWidget">
+    <Link to ='/cart'className="cartWidget">
         <div className="containerCart">
             <span>
                 <SiInstacart/>
             </span>
-            <span>{data.cantidad}</span>
+            <span className='numberCar'>{data.cantidad}</span>
             <div className="listCartWidget">
                 <h4>Mi Carrito</h4>
                 <div className="containerList">
@@ -27,7 +28,7 @@ function CartWidget() {
                 </div>
             </div>
         </div>
-    </a>
+    </Link>
   );
 }
 

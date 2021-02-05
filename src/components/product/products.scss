@@ -8,9 +8,10 @@ $fontfamily: 'Roboto', sans-serif;
 .productCard{
     .container_img{
         border-bottom: $color2 3px solid;
-        width: 300px;
+        width: 100%;
         img{
-            width: 100%;
+           width: 100%;
+           height: 100%;
         }
 
     }
@@ -23,26 +24,25 @@ $fontfamily: 'Roboto', sans-serif;
     }
     h4{
         color: $color3;
-        font-size: 1.2em;
+        font-size: 1.2vw;
         margin: 5px 0;
     }
     .addButton{
-        color: $color2;
+        color: $color5;
         border: solid $color3 2px;
+        background-color: $color3;
         font-family: $fontfamily;
-        font-weight: 700;
-        padding: 5px 10px;
+        font-size: 1.2vw;
+        font-weight: 500;
+        padding: 10px 20px;
         border-radius: 5px;
         margin: 5px;
         &:hover{
             background-color: $color1;
+            color:$color2;
         }
         &:focus{
-            border: solid $color3 2px; 
-        }
-
-        &:visited{
-            border: solid $color3 2px; 
+            outline-color: $color3;
         }
     }
 

@@ -1,6 +1,5 @@
 import {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
-import ListContainerHome from '../Home/listContainerHome/listContainerHome'
 import Products from '../Category/productsList/index'
 import './category.scss';
 import {getFirestore} from "../../firebase/index";
@@ -31,7 +30,6 @@ const Category = () => {
             <h2>{category_name}</h2>
             <Products products={prods} />
             <div>
-            <ListContainerHome/>
             </div>
         </>
     )

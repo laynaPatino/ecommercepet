@@ -8,20 +8,29 @@ $fontfamily: 'Roboto', sans-serif;
 .cartWidget{
     text-decoration: none;
     display: inline-flex;
-    width: 70px;
-    height: 70px;
-    position: relative;
+    width: 90px;
+    height: 90px;
+    position: absolute;
     font-family: $fontfamily;
+    z-index: 2;
+    right: 0px;
     .containerCart{
         width: 100%;
         padding: 10px;
         margin: 4px;
         span{
+            width: 100%;
             svg{
                 fill:$color2;
-                height: 2em;
-                width: 2em;
+                height: 100%;
+                width: 100%;
             }
+        }
+        .numberCar{
+            position: relative;
+            z-index: 1;
+            right: -10px;
+            top: -15px;
         }
         .listCartWidget{
             position: absolute;

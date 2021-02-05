@@ -7,6 +7,7 @@ import ProductList from './components/Home/listContainerHome/productList/Product
 import DetailProducts from './components/detailProducts/index';
 import Cart from './components/cart/index';
 import Checkout from '../src/components/Checkout/Checkout';
+import Footer from "../src/components/Home/listContainerHome/footer/footer";
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Store } from '../src/store/index'
 
@@ -40,6 +41,7 @@ function App() {
             <Checkout/>
           </Route>
         </Switch>
+        <Footer/>
       </BrowserRouter>
     </Store.Provider>
     </div>
