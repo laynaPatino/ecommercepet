@@ -9,18 +9,19 @@ $fontfamily: 'Roboto', sans-serif;
     color: white;
     position: absolute;
     z-index: 10;
-    padding:15%;
+    padding:5% 10%;
     border-radius: 10px;
     text-align: center;
     background-color: $color3;
     opacity: 95%;
-    top: -300px;
+    top: -50px;
+    right: 170px;
     button{
         background-color: $color1;
         width: 80%;
         height: 40px;
         border-radius: 5px;
-        font-size: 2vh;
+        font-size: calc(12px + 0.5vw);
         color: $color2;
         font-weight: bold;
         border: none;
@@ -34,3 +35,4 @@ $fontfamily: 'Roboto', sans-serif;
         }
     }
 }
+

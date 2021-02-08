@@ -35,7 +35,7 @@ const ProductDetail = ({product}) => {
                 <img src={product.data.img} alt="Imagen de producto" />  
             </div>
             <div className="container_div">
-                <h1>{product.data.nombre}</h1>
+                <h2>{product.data.nombre}</h2>
                 <div>
                     <h4>Detalles del Producto</h4>
                     <p>
@@ -51,7 +51,7 @@ const ProductDetail = ({product}) => {
             </div>
             <div className="container_precio">
                 <h3>Precio</h3>
-                <h2>${product.data.precio}</h2>
+                <h3>${product.data.precio}</h3>
                 <div className="counter">
                     <button 
                         disabled={counter === 0 ? 'disabled' : null } 

@@ -19,7 +19,6 @@ $fontfamily: 'Roboto', sans-serif;
     display: inline-flex;
     border-bottom: solid 1px $color2;
     margin-bottom: 30px;
-    padding: 10px;
     color: $color2;
     width: 100%;
     .container_img{
@@ -35,10 +34,12 @@ $fontfamily: 'Roboto', sans-serif;
         width: 50%;
         border-right: solid 1px $color2;
         padding: 10px;
-        h1{
+        h2{
             color: $color3;
+            font-size: calc(12px + 1.5vw);
         }
         h4{
+            font-size: calc(12px + 0.5vw);
             text-decoration: underline $color3;
         }
     }
@@ -48,17 +49,35 @@ $fontfamily: 'Roboto', sans-serif;
         border: solid 1px $color2;
         text-align: center;
         border-radius: 5px;
-        button{
+        h3{
+            font-size: calc(12px + 1.5vw);
+        }
+        .addButton{
             font-weight: bold;
             border: $color3 solid 2px; 
-            padding: 2px 6px; 
             position: relative;
             bottom: 1px;
-            color: $color2;
+            color: $color5;
+            font-family: $fontfamily;
+            font-weight: 700;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin: 5px;
+            background-color: $color3;
+            font-size: calc(12px + 0.3vw);
             &:hover{
                 background-color: $color1;
+                color: $color2;
+            }
+            &:focus{
+                border: solid $color3 2px; 
+            }
+    
+            &:visited{
+                border: solid $color3 2px; 
             }
         }
+    
     }
 
     .counter{
@@ -69,40 +88,29 @@ $fontfamily: 'Roboto', sans-serif;
             color: $color2;
             font-weight: bold;
             border: $color3 solid 2px;
-            padding: 2px;
+            padding: 1px;
+            width: 40%;
+            margin: 5%;
         }
         button{
             font-weight: bold;
             border: $color3 solid 2px; 
-            padding: 2px 6px; 
+            padding: 1px 6px; 
             position: relative;
             bottom: 1px;
-            color: $color2;
+            color: $color5;
+            background-color:$color3 ;
+            border-radius: 5px;
             &:hover{
                 background-color: $color1;
+                color: $color2;
             }
         }
         
     }
 
-    .addButton{
-        color: $color2;
-        border: solid $color3 2px;
-        font-family: $fontfamily;
-        font-weight: 700;
-        padding: 5px 10px;
-        border-radius: 5px;
-        margin: 5px;
-        &:hover{
-            background-color: $color1;
-        }
-        &:focus{
-            border: solid $color3 2px; 
-        }
-
-        &:visited{
-            border: solid $color3 2px; 
-        }
+    .section-img{
+        width: 100%;
     }
 
 }

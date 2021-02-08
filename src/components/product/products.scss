@@ -6,6 +6,9 @@ $color5:#f5f6f7;
 $fontfamily: 'Roboto', sans-serif;
 
 .productCard{
+    border: $color2 3px solid;
+    padding: 10px;
+    border-radius: 5px;
     .container_img{
         border-bottom: $color2 3px solid;
         width: 100%;
@@ -20,11 +23,12 @@ $fontfamily: 'Roboto', sans-serif;
         color: $color2;
         font-family: $fontfamily;
         font-weight: 700;
+        font-size: calc(12px + 0.8vw);
 
     }
     h4{
         color: $color3;
-        font-size: 1.2vw;
+        font-size: calc(12px + 1.5vw);
         margin: 5px 0;
     }
     .addButton{
@@ -32,7 +36,7 @@ $fontfamily: 'Roboto', sans-serif;
         border: solid $color3 2px;
         background-color: $color3;
         font-family: $fontfamily;
-        font-size: 1.2vw;
+        font-size: calc(12px + 0.5vw);
         font-weight: 500;
         padding: 10px 20px;
         border-radius: 5px;
@@ -47,3 +51,5 @@ $fontfamily: 'Roboto', sans-serif;
     }
 
 }
+
+

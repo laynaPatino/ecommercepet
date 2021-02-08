@@ -40,7 +40,7 @@ const Productlist = () => {
                         <h2>Productos Top</h2>
                         <ul>
                             {
-                                itemsProduct.map((item, index) => (
+                                itemsProduct.map((item) => (
                                     <li key={item.id}>
                                         <Products
                                             img = {item.data.img} 

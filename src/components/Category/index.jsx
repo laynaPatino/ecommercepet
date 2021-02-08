@@ -29,8 +29,9 @@ const Category = () => {
         <>
             <h2>{category_name}</h2>
             <Products products={prods} />
-            <div>
-            </div>
+            <section className='section-img'>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/bomji-box.appspot.com/o/carrusel1.jpg?alt=media&token=14eab940-c9cb-4e68-8f48-fc0369182852" alt="Slide 1" className="slider_img"/>
+            </section>
         </>
     )
 }

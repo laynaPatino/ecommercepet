@@ -1,4 +1,3 @@
-import {useState} from 'react';
 import './products.scss';
 import {Link} from 'react-router-dom';
 

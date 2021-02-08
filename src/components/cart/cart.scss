@@ -8,6 +8,10 @@ $fontfamily: 'Roboto', sans-serif;
 
 .Cart{
     text-align: center;
+    margin-bottom: 25px;
+    .slick-dots{
+        display: none;
+    }
     h1{
         color: $color2;
         text-align: center;
@@ -25,7 +29,7 @@ $fontfamily: 'Roboto', sans-serif;
     .finalizarCompra{
         padding: 20px 40px;
         font-family: $fontfamily;
-        font-size: 1.5em;
+        font-size: calc(12px + 0.5vw);
         font-weight: 500;
         border: $color1 2px solid;
         border-radius: 10px;

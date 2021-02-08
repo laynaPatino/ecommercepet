@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import { getFirestore } from "../../../../../firebase/index";
 import Alert from "../../../../global/alert/alert";
+import { useHistory } from "react-router-dom";
+import InformacionPedidos from '../pedidos/informacionPedidos/informacionPedidos'
 import "./pedidos.scss";
 
 const Pedidos = () => {
+    const history = useHistory();
     let estadoAlert = true
     const db = getFirestore();
     const [pedidos, setPedidos] = useState({
@@ -17,7 +20,8 @@ const Pedidos = () => {
         setpedido({ ...pedido, [e.target.name]: e.target.value });
     }
 
-    const handleSubmitForm = () => {
+    const handleSubmitForm = (e) => {
+        e.preventDefault();
         db.collection('ventas').get()
             .then(listaPedidos => {
                 let dataPedido = {};
@@ -26,14 +30,17 @@ const Pedidos = () => {
                     id = itemPedido.id
                     if (id == pedido.pedido) {
                         dataPedido = { id: itemPedido.id, data: itemPedido.data() }
+                        history.push('/cart');
                     }
                 })
                 setPedidos(dataPedido)
             })
-
+        if (pedido.pedido == "") {
+            return(
+                estadoAlert = true
+            )
+        }
     }
-    console.log('PEDIDO 1=>', pedidos)
-
 
     if (pedidos.id !== undefined && pedidos.id !== null) {
         estadoAlert = true
@@ -43,14 +50,15 @@ const Pedidos = () => {
         estadoAlert = false
     }
 
-    console.log('ESTADO ALER', estadoAlert)
+
+
 
     return (
         <>
-            <div className='divForm'>
-                <input type="text" value={pedido.pedido} onChange={handleChangeInput} name="pedido" placeholder="Codigo de Pedido" />
-                <button onClick={handleSubmitForm} >Consultar</button>
-            </div>
+            <form className='divForm' onSubmit={handleSubmitForm}>
+                <input type="text" value={pedido.pedido} onChange={handleChangeInput} name="pedido" placeholder="Codigo de Pedido" required />
+                <button>Consultar</button>
+            </form>
             <Alert texto='codigo invalido' estado={estadoAlert} />
         </>
     );

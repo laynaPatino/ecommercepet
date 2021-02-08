@@ -28,7 +28,7 @@ header{
     
     }
 
-    nav{
+    .nav{
         padding-bottom: 15px;
         text-align: center;
         ul{
@@ -58,3 +58,8 @@ header{
     }
 }
 
+@media(max-width: 900px){
+    .nav {
+        display: none;
+    }
+}

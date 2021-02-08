@@ -1,9 +1,26 @@
-.products{
-    display: inline-flex;
-    width: 100%;
-    article{
-        margin: 15px;
-        text-align: center;
-        width: 25%;
+.products {
+  display: inline-flex;
+  width: 100%;
+  flex-wrap: wrap;
+  article {
+    margin: 15px;
+    text-align: center;
+    width: 18%;
+  }
+}
+
+@media (max-width: 900px) {
+  .products {
+    article {
+      width: 23%;
     }
+  }
+}
+
+@media (max-width: 500px) {
+  .products {
+    article {
+      width: 31%;
+    }
+  }
 }

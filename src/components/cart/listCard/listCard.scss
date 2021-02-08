@@ -7,18 +7,39 @@ $fontfamily: 'Roboto', sans-serif;
 
 .itemCart{
     display: inline-flex;
-    width: 45%;
+    width: 60%;
+    min-width: 400px;
     border: solid 2px $color3;
     margin: 10px;
     font-family:$fontfamily;
     color:$color2;
-    button{
-        padding: 10px 20px;
-        font-family:$fontfamily;
-        background-color: $color3;
-        color: #ffff;
-        font-weight: 500;
-        border-radius: 5px;
-        border: $color1 solid 2px;
+    padding: 10px;
+    .container_img{
+        width: 50%;
+        max-width: 300px;
+        img{
+            width: 100%;
+            height:100%;
+        }
+    }
+    .container_info{
+        width: 50%;
+        h3{
+            font-size: calc(12px + 1vw);
+            margin: 0 0.5%;
+        }
+        h4{
+            font-size: calc(12px + 0.5vw);
+        }
+        button{
+            padding: 10px 20px;
+            font-family:$fontfamily;
+            background-color: $color3;
+            color: #ffff;
+            font-weight: 500;
+            border-radius: 5px;
+            border: $color1 solid 2px;
+        }
+
     }
 }

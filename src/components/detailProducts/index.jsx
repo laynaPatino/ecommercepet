@@ -29,8 +29,8 @@ const DetailProducts = () => {
                 product ?
                 <div>
                     <ProductDetail product={product} />
-                    <section>
-                    <ListContainerHome/>
+                    <section className='section-img'>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/bomji-box.appspot.com/o/carrusel1.jpg?alt=media&token=14eab940-c9cb-4e68-8f48-fc0369182852" alt="Slide 1" className="slider_img"/>
                     </section>
                 </div> : 
                 <p className="loading">Cargando producto...</p>

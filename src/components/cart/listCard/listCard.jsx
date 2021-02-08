@@ -27,8 +27,10 @@ const CartList = ({titulo,precio,id,img,cantidad, precioTotal}) => {
 
     return (
         <div className='itemCart'>
-            <img src={img} alt="Imagen de producto" width="300" />
-            <div>
+            <div className='container_img'>
+                <img src={img} alt="Imagen de producto" />
+            </div>
+            <div className='container_info'>
                 <h3>{titulo}</h3>
                 <h4>Precio Unidad: ${precio}</h4>
                 <h4>Cantidad: {cantidad}</h4>

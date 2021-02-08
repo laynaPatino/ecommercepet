@@ -1,4 +1,4 @@
-footer{
+footer {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -18,31 +18,31 @@ footer{
         #ffea49 83.33%
       );
       .segimiento {
-        width: 30%;
+        width: 40%;
         text-align: center;
         h2 {
-          font-size: 2.7vw;
+          font-size: calc(12px + 1.5vw);
           text-decoration: none;
           width: 100%;
           margin: 0;
         }
       }
       .divForm {
-        width: 30%;
+        width: 40%;
         text-align: center;
         margin: auto 0;
-        input{
+        input {
           width: 90%;
           height: 40px;
           margin-bottom: 10px;
           border-radius: 10px;
           border: #97c407 1px solid;
           padding: 10px;
-          &:focus{
-            outline-color:#97c407;
+          &:focus {
+            outline-color: #97c407;
           }
         }
-        button{
+        button {
           width: 90%;
           height: 40px;
           background-color: #97c407;
@@ -51,7 +51,7 @@ footer{
           color: #ffff;
           font-size: 1.2vh;
           font-weight: bold;
-          &:hover{
+          &:hover {
             background-color: #997648;
             width: 93%;
           }
@@ -68,13 +68,13 @@ footer{
         font-weight: 900;
         margin: 0;
         padding: 15px 0;
-        font-size: 4vw;
+        font-size: calc(12px + 2vw);
         text-decoration: none;
         border-right: #997648 solid 1px;
-        a{
+        a {
           text-decoration: none;
           color: #997648;
-          &:hover{
+          &:hover {
             color: #97c407;
             font-weight: bold;
           }
@@ -90,7 +90,7 @@ footer{
           width: 100%;
           height: 30px;
           fill: #97c407;
-          &:hover{
+          &:hover {
             fill: #997648;
             height: 31px;
           }
@@ -118,26 +118,26 @@ footer{
             svg {
               width: 3vw;
               height: 1.5vw;
-              margin-right: 10px;
+              margin-right: 0.5%;
               fill: #97c407;
             }
           }
         }
-        .nav{
+        .nav {
           display: inline-flex;
           flex-wrap: wrap;
           text-decoration: none;
           border-left: 1px solid #997648;
           border-right: 1px solid #997648;
-          li{
+          li {
             width: 50%;
             margin: 0;
             margin: 5px 0;
-            a{
+            a {
               text-decoration: none;
               color: #997648;
               font-size: 1.2vw;
-              &:hover{
+              &:hover {
                 color: #97c407;
                 font-weight: 500;
               }
@@ -148,3 +148,5 @@ footer{
     }
   }
 }
+
+

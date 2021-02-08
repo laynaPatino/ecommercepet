@@ -38,3 +38,31 @@ $fontfamily: 'Roboto', sans-serif;
         }
     }   
 }
+
+@media (max-width: 900px) {
+    .productList{
+        .container_{
+            ul{
+    
+                li{
+                    width: 23%;
+                }
+            }
+           
+        }   
+    }
+  }
+
+  @media (max-width: 500px) {
+    .productList{
+        .container_{
+            ul{
+    
+                li{
+                    width: 31%;
+                }
+            }
+           
+        }   
+    }
+  }

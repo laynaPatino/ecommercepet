@@ -49,11 +49,10 @@ const Checkout = () => {
                 {
                     !venta ?
                     <form onSubmit={handleSubmitForm}>
-                        <input type="text" value={formData.nombre} onChange={handleChangeInput} name="nombre" placeholder="Nombre" />
-                        <input type="text" value={formData.apellido} onChange={handleChangeInput} name="apellido" placeholder="Apellido" />
-                        <input type="email" value={formData.email} onChange={handleChangeInput} name="email" placeholder="E-mail" />
-                        <input type="tel" value={formData.tel} onChange={handleChangeInput} name="tel" placeholder="Teléfono" />
-                        
+                        <input type="text" value={formData.nombre} onChange={handleChangeInput} name="nombre" placeholder="Nombre" required/>
+                        <input type="text" value={formData.apellido} onChange={handleChangeInput} name="apellido" placeholder="Apellido" required />
+                        <input type="email" value={formData.email} onChange={handleChangeInput} name="email" placeholder="E-mail" required/>
+                        <input type="tel" value={formData.tel} onChange={handleChangeInput} name="tel" placeholder="Teléfono" required/>
                         <button>Pagar</button>
                     </form> :
                     <p>La compra se realizó correctamente, tu número de seguimiento es: <span>{idCompra}</span></p>

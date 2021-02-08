@@ -1,10 +1,13 @@
+import Pedidos from '../../Home/listContainerHome/footer/pedidos/pedidos'
 import "./alert.scss";
 
-const alert = ({texto, estado}) => {
+
+const Alert = ({texto, estado}) => {
 
   if (estado == true) {
     return null;
   }
+
   return (
     <div className='alert'>
       <h1>{texto}</h1>
@@ -13,4 +16,8 @@ const alert = ({texto, estado}) => {
   );
 };
 
-export default alert;
+
+
+
+
+export default Alert;

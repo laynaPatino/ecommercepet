@@ -1,5 +1,6 @@
 import './navBar.scss';
 import CartWidget from './cartWidget/cartWidget';
+import NavStyle from "./navStyle/navStyle";
 import {Link} from 'react-router-dom'
 
 function navBar() {
@@ -7,11 +8,12 @@ function navBar() {
     <>
       <header>
         <div>
+        <NavStyle/>
           <div className="container_title">
             <h1 className="title"><Link to='/'>BomJi Box</Link> </h1>
             <CartWidget/>
           </div>
-          <nav>
+          <nav className="nav">
             <ul>
               <li>
                 <Link to ='/category/cajaDelMes'>Caja del mes</Link>
