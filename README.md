@@ -13,7 +13,7 @@ arranque su aplicacion en modo desarrollador
 
 #### [ESP] Proyecto de e-commerce realizado con React JS, SASS y Firebase
 
-<a href="https://firebasestorage.googleapis.com/v0/b/bomji-box.appspot.com/o/React%20App%20-%20Google%20Chrome%202021-02-09%2001-29-34.mp4?alt=media&token=5882cbc6-e8cc-44f4-8e0c-7b9da4ace4df"></a>
+<a href=""><img src="https://firebasestorage.googleapis.com/v0/b/bomji-box.appspot.com/o/React%20App%20-%20Google%20Chrome%202021-02-09%2001-29-34.mp4?alt=media&token=5882cbc6-e8cc-44f4-8e0c-7b9da4ace4df" alt="web" border="0"></a>
 
 ## Comenzando 🚀
 
