@@ -8,6 +8,7 @@ import DetailProducts from './components/detailProducts/index';
 import Cart from './components/cart/index';
 import Checkout from '../src/components/Checkout/Checkout';
 import Footer from "../src/components/Home/listContainerHome/footer/footer";
+import InformacionPedidos from '../src/components/Home/listContainerHome/footer/pedidos/informacionPedidos/informacionPedidos'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Store } from '../src/store/index'
 
@@ -17,6 +18,7 @@ function App() {
     items: [],
     cantidad: 0,
     precioTotal: 0,
+    pedidos:''
   })
 
   return (
@@ -39,6 +41,9 @@ function App() {
           </Route>
           <Route exact path="/checkout">
             <Checkout/>
+          </Route>
+          <Route exact path="/informacionPedidos">
+            <InformacionPedidos/>
           </Route>
         </Switch>
         <Footer/>

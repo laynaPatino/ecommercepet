@@ -1,8 +1,11 @@
 .informacionPedidos{
-    position: absolute;
-    z-index: 10;
-    border-radius: 10px;
-    text-align: center;
-    background-color: yellowgreen;
-    width: 80%;
+    width: 100%;
+    .itemCart{
+        .container_info{
+            button{
+                display: none;
+            }
+    
+        }
+    }
 }

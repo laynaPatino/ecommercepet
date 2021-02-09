@@ -12,8 +12,6 @@ function CartWidget() {
 
     const [data] = useContext(Store);
 
-    console.log(data)
-
   return (
     <Link to ='/cart'className="cartWidget">
         <div className="containerCart">

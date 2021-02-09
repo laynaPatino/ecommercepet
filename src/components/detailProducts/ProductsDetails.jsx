@@ -44,13 +44,10 @@ const ProductDetail = ({product}) => {
                 precioTotal: data.precioTotal + (product.data.precio * counter),
                 items:[...data.items, {product:  product.data, id:product.id, cantidad: counter, precioTotal:(product.data.precio * counter) }]
             });
-            console.log('data3')
             history.push('/cart');
         }
         
     }
-
-    console.log('data1',data.items)
 
 
     return (
