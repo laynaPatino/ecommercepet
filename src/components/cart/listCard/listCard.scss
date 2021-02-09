@@ -7,13 +7,14 @@ $fontfamily: 'Roboto', sans-serif;
 
 .itemCart{
     display: inline-flex;
-    width: 60%;
+    width: 45%;
     min-width: 400px;
     border: solid 2px $color3;
     margin: 10px;
     font-family:$fontfamily;
     color:$color2;
     padding: 10px;
+    max-width: 600px;
     .container_img{
         width: 50%;
         max-width: 300px;
@@ -25,8 +26,11 @@ $fontfamily: 'Roboto', sans-serif;
     .container_info{
         width: 50%;
         h3{
-            font-size: calc(12px + 1vw);
+            font-size: calc(12px + 1.5vw);
             margin: 0 0.5%;
+            background-color: transparent;
+            border: none;
+            padding: 0;
         }
         h4{
             font-size: calc(12px + 0.5vw);
@@ -39,6 +43,11 @@ $fontfamily: 'Roboto', sans-serif;
             font-weight: 500;
             border-radius: 5px;
             border: $color1 solid 2px;
+            font-size: calc(12px + 0.5vw);
+            &:hover{
+                background-color: $color2; 
+                padding: 10px 25px;
+            }
         }
 
     }

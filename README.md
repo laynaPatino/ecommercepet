@@ -31,6 +31,8 @@ arranque su aplicacion en modo desarrollador
 * "slick-carousel": "^1.8.1"
 #### react-icons: Incluye iconos populares en sus proyectos de React .
 * "react-icons": "^4.1.0",
+#### react-scroll: Componente para animar el desplazamiento vertical.
+* "react-scroll": "^1.8.1",
 
 
 ## Autora ✒️

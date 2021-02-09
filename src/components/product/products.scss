@@ -44,6 +44,7 @@ $fontfamily: 'Roboto', sans-serif;
         &:hover{
             background-color: $color1;
             color:$color2;
+            padding: 10px 25px;
         }
         &:focus{
             outline-color: $color3;

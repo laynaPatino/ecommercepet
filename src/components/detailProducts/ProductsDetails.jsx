@@ -7,6 +7,7 @@ const ProductDetail = ({product}) => {
     const [data, setData] = useContext(Store);
     const [counter, setCounter] = useState(0);
 
+
     const decreaseCounter = () => {
         if(counter >= 1) {
             setCounter(counter - 1);
@@ -14,20 +15,43 @@ const ProductDetail = ({product}) => {
     }
 
     const handleClickAddProduct = () => {
-        if(counter >= 1){
+        if(data.items.length && counter >= 1){
+            data.items.map((item, index, object) => {
+                if(item.id == product.id){
+                    object.splice(index, 1);
+                    let cantidad = item.cantidad + counter;
+                    console.log('data2',data.items ,item,cantidad)
+                    setData({
+                        ...data,
+                        cantidad:data.cantidad + counter ,
+                        precioTotal: data.precioTotal + (product.data.precio * counter),
+                        items:[...data.items, {product:  product.data, id:product.id, cantidad: cantidad , precioTotal:(product.data.precio * cantidad) }]
+                    });
+                }else{
+                    setData({
+                        ...data,
+                        cantidad:data.cantidad + counter,
+                        precioTotal: data.precioTotal + (product.data.precio * counter),
+                        items:[...data.items, {product:  product.data, id:product.id, cantidad: counter, precioTotal:(product.data.precio * counter) }]
+                    });
+                }
+            })
+            history.push('/cart'); 
+        } else{
             setData({
                 ...data,
                 cantidad:data.cantidad + counter,
                 precioTotal: data.precioTotal + (product.data.precio * counter),
                 items:[...data.items, {product:  product.data, id:product.id, cantidad: counter, precioTotal:(product.data.precio * counter) }]
-    
             });
+            console.log('data3')
             history.push('/cart');
-            // alert(`Agregaste ${qty} productos al carrito`);
-        }	
+        }
+        
     }
-    
-    console.log(data);
+
+    console.log('data1',data.items)
+
 
     return (
         <article className="container">

@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { Store } from "../../../src/store/index";
 import CardList from "./listCard/listCard";
 import { Link } from "react-router-dom";
+import { ImArrowLeft2 } from "react-icons/im";
+
 
 import "../cart/cart.scss";
 
@@ -13,7 +15,7 @@ const Cart = () => {
             <section className='section-img'>
                 <img src="https://firebasestorage.googleapis.com/v0/b/bomji-box.appspot.com/o/carrusel1.jpg?alt=media&token=14eab940-c9cb-4e68-8f48-fc0369182852" alt="Slide 1" className="slider_img" />
             </section>
-            <h1>Carrito de compras</h1>
+            <h2>Carrito de compras</h2>
             {data.items.length ? (
                 <>
                     <div>
@@ -31,8 +33,8 @@ const Cart = () => {
                         ))}
                     </div>
                     <div>
-                        <h2>Items Agregados: {data.cantidad}</h2>
-                        <h2>Precio Total: ${data.precioTotal}</h2>
+                        <h3>Items Agregados: {data.cantidad}</h3>
+                        <h3>Precio Total: ${data.precioTotal}</h3>
                         <Link to={`/checkout`}>
                             <button className="finalizarCompra">Finalizar Compra</button>
                         </Link>
@@ -40,9 +42,9 @@ const Cart = () => {
                 </>
             ) : (
                     <>
-                        <h2>Carrito Vacío</h2>
+                        <h3>Tu Carrito esta Vacío</h3>
                         <Link to={`/`}>
-                            <a className="">volver a la Tienda</a>
+                            <ImArrowLeft2/><a className="">volver a la Tienda</a>
                         </Link>
                     </>
                 )}

@@ -1,4 +1,5 @@
 import Pedidos from '../footer/pedidos/pedidos'
+import { animateScroll as scroll} from 'react-scroll';
 import { SiInstagram } from "react-icons/si";
 import { SiWhatsapp } from "react-icons/si";
 import { SiTwitter } from "react-icons/si";
@@ -41,22 +42,22 @@ const Footer = () => {
           <div className="info_container">
             <ul className="nav">
               <li>
-                <Link to="/category/cajaDelMes">Caja del mes</Link>
+                <Link to="/category/cajaDelMes" onClick={()=>{scroll.scrollToTop()}}>Caja del mes</Link>
               </li>
               <li>
-                <Link to="/category/porTemporada">Por temporada</Link>
+                <Link to="/category/porTemporada" onClick={()=>{scroll.scrollToTop()}}>Por temporada</Link>
               </li>
               <li>
-                <Link to="/category/sorpresa">Sorpresas</Link>
+                <Link to="/category/sorpresa" onClick={()=>{scroll.scrollToTop()}}>Sorpresas</Link>
               </li>
               <li>
-                <Link to="/category/promociones">Promociones</Link>
+                <Link to="/category/promociones" onClick={()=>{scroll.scrollToTop()}}>Promociones</Link>
               </li>
               <li>
-                <Link to="/category/personalizadas">Personalizadas</Link>
+                <Link to="/category/personalizadas" onClick={()=>{scroll.scrollToTop()}}>Personalizadas</Link>
               </li>
               <li>
-                <Link to="/cart">Carrito</Link>
+                <Link to="/cart" onClick={()=>{scroll.scrollToTop()}}>Carrito</Link>
               </li>
             </ul>
           </div>

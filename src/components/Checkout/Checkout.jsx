@@ -37,6 +37,13 @@ const Checkout = () => {
             setIdCompra(id);
         })
         .catch(e => console.log(e));
+
+        setData({
+            ...data,
+            cantidad:0,
+            precioTotal: 0,
+            items:[]
+        });
     }
 
 

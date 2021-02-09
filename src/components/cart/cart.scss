@@ -12,19 +12,25 @@ $fontfamily: 'Roboto', sans-serif;
     .slick-dots{
         display: none;
     }
-    h1{
+    h2{
         color: $color2;
         text-align: center;
         font-family: $fontfamily;
+        font-size: 2.7em;
     }
-    h2{
+    h3{
         border: 1px solid $color3 ;
         padding: 20px;
         background-color: $color1;
+        font-size: calc(12px + 1vw);
+        color: $color2 ;
     }
     a{
         color: $color3;
         font-weight: 500;
+        font-size: 1.5em;
+        text-decoration: none;
+
     }
     .finalizarCompra{
         padding: 20px 40px;
@@ -37,6 +43,7 @@ $fontfamily: 'Roboto', sans-serif;
         color: $color5;
         &:hover{
             background-color: $color2;
+            padding: 20px 45px;
         }
     }
 
